@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use this repository, please cite it using the metadata below."
+title: "Spatial Accessibility and Equity of Primary Healthcare Services in Kano State, Nigeria"
+type: dataset
+authors:
+  - family-names: "Ayomide"
+    given-names: "Abdullah Abdazeez"
+date-released: 2026-08-05
+repository-code: "https://github.com/Abdullahabdazeez/kano-primary-healthcare-accessibility"
+license: MIT
+keywords:
+  - GIS
+  - healthcare accessibility
+  - 2SFCA
+  - network analysis
+  - spatial equity
+  - Kano

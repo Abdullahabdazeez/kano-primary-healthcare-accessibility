@@ -1,0 +1,25 @@
+Indicator,Value,Unit
+Study population,18771133.63,people
+Primary healthcare facilities,1584.0,facilities
+LGAs analysed,44.0,LGAs
+Wards analysed,484.0,wards
+Demand origins,16789.0,1-km cells
+Population-weighted nearest-PHC travel time,2.454634495815062,minutes
+Population within 5 min,86.41011944751746,%
+Population within 10 min,97.78233100121597,%
+Population within 15 min,99.67430422377784,%
+Population-weighted 2SFCA score,0.8438488753787556,"PHCs per 10,000"
+Critical underserved wards,29.0,wards
+Critical underserved population,904162.9206519127,people
+Critical + compound underserved wards,84.0,wards
+Critical + compound underserved population,2759235.5762494802,people
+Critical + compound population share,14.699355034368697,%
+Very-high planning-priority wards,97.0,wards
+Very-high priority population,3240954.5470181704,people
+High + very-high priority wards,194.0,wards
+High + very-high priority population,8152460.638112903,people
+High + very-high population share,43.43083800268542,%
+Preferred scenario new PHCs,10.0,facilities
+Preferred scenario weighted travel time,2.41432298601334,minutes
+Preferred scenario 2SFCA score,0.84917620413746,"PHCs per 10,000"
+Population benefiting from preferred scenario,556700.6144218445,people
