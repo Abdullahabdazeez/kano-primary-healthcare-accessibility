@@ -1,0 +1,4 @@
+Comparison,Spearman_Rank_Correlation,Median_Absolute_Rank_Shift,P90_Absolute_Rank_Shift,Maximum_Absolute_Rank_Shift
+Binary_15min vs E2SFCA_3Zone,0.8954126861006466,748.25,2431.300000000001,7570.0
+Binary_15min vs Gaussian_Moderate,0.9507049275924958,492.0,1650.6500000000005,6537.0
+Binary_15min vs Gaussian_Strong,0.885049127367522,778.0,2551.1500000000005,8956.0

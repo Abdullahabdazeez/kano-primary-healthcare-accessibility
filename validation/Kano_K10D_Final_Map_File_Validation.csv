@@ -1,0 +1,8 @@
+file_name,source,scientific_status,size_kb,exists,valid_png
+01_PHC_Distribution_and_Population_Demand.png,Kano_Ward_Population_2025.gpkg + Kano_PHC_Routing_Origins_Final.gpkg,VALIDATED,1092.88,True,True
+02_Network_Travel_Time_to_Nearest_PHC.png,Kano_Demand_Nearest_PHC_TravelTime_Final.gpkg,VALIDATED,2025.44,True,True
+03_Validated_15min_2SFCA_Healthcare_Accessibility.png,Kano_Ward_2SFCA_15min.gpkg,VALIDATED,874.53,True,True
+04_Multi_Dimensional_Underserved_Wards.png,Kano_Underserved_Wards_Typology.gpkg,VALIDATED,936.18,True,True
+05_Healthcare_Planning_Priority_Wards.png,Kano_Ward_Planning_Priority.gpkg,VALIDATED,893.92,True,True
+06_Validated_PHC_Expansion_Scenarios.png,Kano_PHC_Expansion_Scenario_Demand.gpkg + Kano_Validated_Expansion_Scenario_Summary.csv,VALIDATED,3815.66,True,True
+07_Validated_Top20_New_PHC_Candidate_Sites.png,Kano_New_PHC_Candidate_Sites.gpkg + Kano_Ward_Planning_Priority.gpkg,VALIDATED,1180.09,True,True

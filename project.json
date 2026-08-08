@@ -1,26 +1,27 @@
 {
-  "project_title": "Spatial Accessibility and Equity of Primary Healthcare Services in Kano State, Nigeria",
+  "project_title": "Primary Healthcare Accessibility and Underservice in Kano State, Nigeria",
   "repository_name": "kano-primary-healthcare-accessibility",
   "study_area": "Kano State, Nigeria",
-  "theme": "Healthcare Accessibility, Spatial Equity and Planning",
+  "theme": "Primary Healthcare Accessibility and Spatial Planning",
   "analysis_period": "2025 planning baseline",
-  "summary": "Network-based assessment of travel-time access, population-to-facility supply, underserved wards and strategic primary healthcare expansion across Kano State.",
+  "summary": "Road-network travel-time and 15-minute 2SFCA assessment of primary healthcare spatial availability, underserved wards, planning priorities and validated +5, +10 and +20 PHC expansion scenarios across Kano State.",
   "author": "Abdullah Abdazeez Ayomide",
   "github": "https://github.com/Abdullahabdazeez",
-  "linkedin": "https://ng.linkedin.com/in/abdazeez-abdullah-4b814719a",
-  "email": "abdazeezabdullah1@gmail.com",
   "headline_results": {
-    "population": 18771134,
     "phc_facilities": 1584,
-    "lgas": 44,
     "wards": 484,
-    "demand_origins": 16789,
-    "weighted_travel_time_min": 2.454634,
-    "population_within_10min_pct": 97.78233,
-    "weighted_2sfca_per_10000": 0.843849,
-    "critical_compound_wards": 84,
-    "critical_compound_population": 2759236,
-    "very_high_priority_wards": 97,
-    "preferred_scenario_beneficiaries": 556701
-  }
+    "demand_cells": 16789,
+    "baseline_population_weighted_2sfca_per_10000": 0.8438488753787575,
+    "top5_population_weighted_2sfca_per_10000": 0.8465125397581096,
+    "top10_population_weighted_2sfca_per_10000": 0.8491762041374616,
+    "top20_population_weighted_2sfca_per_10000": 0.854503532896166,
+    "top20_relative_statewide_gain_pct": 1.2626262626262514,
+    "top20_population_benefiting": 687356.410675168,
+    "top20_population_share_benefiting_pct": 3.6617735740695694,
+    "candidate_sites_assessed": 97,
+    "verified_top20_candidate_catchments": 20,
+    "reproduced_binary_scenarios": 4
+  },
+  "interpretation": "2SFCA is facility-count-based and measures modeled spatial availability. It does not measure staffing, service capacity, healthcare quality, patient utilization or health outcomes.",
+  "final_review_status": "VALIDATED"
 }

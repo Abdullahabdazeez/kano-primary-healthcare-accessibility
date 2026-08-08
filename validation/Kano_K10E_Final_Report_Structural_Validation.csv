@@ -1,0 +1,13 @@
+check,passed
+Contains final validated report title,True
+Contains healthcare accessibility section,True
+Contains validated 15-minute 2SFCA method,True
+Contains PHC expansion scenarios,True
+Contains distance-decay sensitivity section,True
+Contains limitations section,True
+Contains validated 1.26% top-20 result,True
+States modeled spatial availability limitation,True
+Document exists,True
+Document size above 1 MB,True
+At least 10 figures inserted,True
+At least 3 tables inserted,True

@@ -1,0 +1,4 @@
+Comparison,Binary_Low_Nodes,Decay_Low_Nodes,Shared_Low_Nodes,Binary_Low_Nodes_Retained_Pct,Jaccard_Similarity
+Binary_15min vs E2SFCA_3Zone,2248,2248,1734,77.13523131672598,0.6278059377262853
+Binary_15min vs Gaussian_Moderate,2248,2248,1914,85.14234875444839,0.7412858249419055
+Binary_15min vs Gaussian_Strong,2248,2248,1736,77.22419928825623,0.6289855072463768
