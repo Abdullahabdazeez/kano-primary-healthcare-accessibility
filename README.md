@@ -1,128 +1,199 @@
-# Spatial Accessibility and Equity of Primary Healthcare Services in Kano State, Nigeria
+# Primary Healthcare Accessibility and Underservice in Kano State, Nigeria
 
-**Network-based assessment of travel-time access, healthcare supply, underserved wards and strategic PHC expansion across Kano State.**
+![Kano PHC Accessibility Project Cover](assets/project_cover/kano_phc_accessibility_project_cover.png)
 
-<p align="center">
-  <img src="assets/project-cover.png" alt="Healthcare planning-priority wards in Kano State" width="100%">
-</p>
+## Overview
 
-Kano has a large primary healthcare network, but proximity to a facility does not necessarily mean that healthcare supply is equitable. This project combined validated PHC locations, gridded population demand, operational ward boundaries and an OpenStreetMap road network to evaluate both travel time and population-adjusted service availability.
+This project examines primary healthcare access across Kano State, Nigeria. It combines population data, PHC locations and road-network travel time with a 15-minute two-step floating catchment area (2SFCA) analysis.
 
-Multi-source shortest-path analysis estimated access to the nearest PHC, while a 15-minute Two-Step Floating Catchment Area model compared facility supply with surrounding population demand. The results show that **97.78% of the population is within 10 minutes of a PHC**, yet the statewide population-weighted 2SFCA score is only **0.8438 PHCs per 10,000 people**. This contrast demonstrates that physical proximity alone can conceal substantial differences in service pressure.
+The study asks two simple questions:
 
-The analysis identified **84 critical or compound underserved wards**, containing approximately **2.76 million people**, and classified **97 wards as very-high planning priorities**. A strategic scenario adding ten PHCs improved modelled 2SFCA access for approximately **556,701 people**. These candidate sites are planning-support locations rather than parcel-level construction recommendations.
+1. Where are the main gaps in primary healthcare access across Kano State?
+2. How much could carefully selected new PHC locations improve access?
 
-| Project detail | Information |
+The analysis covers **1,584 PHCs**, **484 wards** and **16,789 population-demand cells**.
+
+---
+
+## Why this matters
+
+Being close to a health facility does not always mean that access is adequate. A nearby PHC may serve a very large population, which can reduce the amount of facility supply available to each community.
+
+This project therefore looks at both travel time and population demand.
+
+---
+
+## Data
+
+| Dataset | Purpose |
 |---|---|
-| **Study area** | Kano State, Nigeria |
-| **Population analysed** | 18,771,134 |
-| **Primary healthcare facilities** | 1,584 |
-| **Administrative units** | 44 LGAs and 484 operational wards |
-| **Demand origins** | 16,789 one-kilometre population cells |
-| **Access methods** | Shortest-path travel time and 15-minute 2SFCA |
-| **Planning outputs** | Underserved typology, priority ranking and +10 PHC scenario |
+| Primary healthcare facilities | Existing PHC locations |
+| Ward population | Population demand |
+| Road network | Travel-time modelling |
+| Demand cells | Population-based accessibility analysis |
+| Ward boundaries | Ward-level summaries |
+| Candidate PHC sites | Expansion scenario testing |
+
+---
+
+## Method
+
+The analysis followed these steps:
+
+1. Measured road-network travel time from population locations to the nearest PHC.
+2. Calculated a 15-minute 2SFCA accessibility score.
+3. Summarised accessibility at ward level.
+4. Identified underserved wards.
+5. Created a healthcare planning-priority classification.
+6. Assessed 97 possible locations for new PHCs.
+7. Tested +5, +10 and +20 PHC expansion scenarios.
+8. Repeated the accessibility analysis with three distance-decay methods to check whether the main findings changed.
+
+The main 2SFCA model uses **facility count as supply**.
+
+---
 
 ## Key findings
 
-- Population-weighted nearest-PHC travel time was **2.45 minutes**.
-- **86.41%**, **97.78%** and **99.67%** of the population were within 5, 10 and 15 minutes of a PHC respectively.
-- Population-weighted healthcare supply was **0.8438 PHCs per 10,000 people**.
-- **29 wards** were classified as critically underserved.
-- **84 critical or compound underserved wards** contained **2,759,236 people**, representing **14.70%** of the study population.
-- **97 wards** were classified as very-high planning priorities.
-- Yangizo Ward in Warawa recorded the highest planning-priority score: **77.88/100**.
-- Dawakin Kudu recorded the lowest LGA-level 2SFCA accessibility: **0.4615 PHCs per 10,000 people**.
-- The preferred +10 PHC scenario improved modelled 2SFCA access for **556,701 people**.
+The baseline population-weighted 2SFCA score was **0.8438 PHCs per 10,000 people**.
 
-## Analytical workflow
+Adding the top 20 proposed PHCs increased this to **0.8545**, a statewide increase of only **1.26%**.
 
-1. Harmonised Kano State, LGA and operational ward boundaries.
-2. Validated and projected PHC facility locations.
-3. Prepared a one-kilometre population-demand grid.
-4. Extracted and attributed the OpenStreetMap drive network using road-class speed assumptions.
-5. Calculated multi-source shortest-path travel time to the nearest PHC.
-6. Estimated population-weighted access within 5-, 10- and 15-minute thresholds.
-7. Applied a 15-minute Two-Step Floating Catchment Area model.
-8. Classified multi-dimensional underserved wards.
-9. Combined travel time, supply accessibility and population exposure into a planning-priority index.
-10. tested strategic PHC expansion scenarios and selected the +10 facility option for detailed mapping.
+About **687,356 people** experienced some improvement in modeled access under the +20 PHC scenario. This represents about **3.66% of the state population**.
 
-## Data sources
+The result suggests that new PHCs can improve access in selected underserved communities, but facility expansion alone produces only a small statewide change.
 
-| Dataset | Provider | Purpose |
-|---|---|---|
-| Health facilities | GRID3 Nigeria Health Facilities v2.0 | Validated PHC supply locations |
-| Population | GRID3 / WorldPop Nigeria Population v3.0 | Gridded demand and administrative totals |
-| Administrative boundaries | GRID3 operational boundaries | State, LGA and ward reporting |
-| Road network | OpenStreetMap | Network-based travel-time modelling |
+---
 
-## Principal outputs
+## Main maps
 
-### Travel time to the nearest PHC
+### 1. 15-minute 2SFCA accessibility
 
-![Network travel time](outputs/maps/02_network_travel_time_to_nearest_phc.png)
+![Validated 2SFCA Accessibility](assets/maps/01_2sfca_accessibility.png)
 
-### 15-minute 2SFCA healthcare accessibility
+This map shows modeled spatial availability of PHCs relative to population demand.
 
-![2SFCA healthcare accessibility](outputs/maps/03_15min_2sfca_healthcare_accessibility.png)
+### 2. Multi-dimensional underservice
 
-### Multi-dimensional underserved wards
+![Underserved Wards](assets/maps/02_underserved_wards.png)
 
-![Underserved wards](outputs/maps/04_multi_dimensional_underserved_wards.png)
+This map identifies wards where several access problems occur together.
 
-### Recommended ten-PHC expansion scenario
+### 3. Healthcare planning priority
 
-![Recommended PHC expansion](outputs/maps/06_recommended_10_phc_expansion_scenario.png)
+![Planning Priority Wards](assets/maps/03_planning_priority_wards.png)
 
-## Planning interpretation
+The planning-priority map highlights wards that may require closer attention when planning future PHC investment.
 
-The project distinguishes **geographic proximity** from **population-adjusted service accessibility**. Although most residents are close to a PHC in travel-time terms, several wards combine high population pressure, comparatively low facility supply and weaker access outcomes. Those wards require more attention than a simple nearest-facility map would indicate.
+### 4. PHC expansion scenarios
 
-The priority and underserved classes are relative analytical classes derived from the Kano study distribution; they are not official Nigerian service standards. Candidate facilities are strategic accessibility-intervention points and require parcel-level feasibility, land ownership, service quality, staffing, financing and community consultation before implementation.
+![PHC Expansion Scenarios](assets/maps/04_phc_expansion_scenarios.png)
+
+The baseline, +5, +10 and +20 PHC scenarios show where new facilities improve modeled access.
+
+### 5. Top-20 candidate locations
+
+![Top 20 Candidate Sites](assets/maps/05_top20_candidate_sites.png)
+
+These are the 20 highest-ranked candidate locations from the 97 sites assessed. They are planning options, not confirmed facility locations.
+
+---
+
+## Expansion results
+
+![Statewide 2SFCA Expansion](assets/charts/01_statewide_2sfca_expansion.png)
+
+The statewide change remains small even as more PHCs are added.
+
+![Population Benefiting](assets/charts/02_population_benefiting.png)
+
+The expansion scenarios still provide useful local benefits for some underserved communities.
+
+---
+
+## Distance-decay check
+
+![Distance Decay Sensitivity](assets/charts/03_distance_decay_sensitivity.png)
+
+The analysis was repeated with three distance-decay methods.
+
+The broad pattern remained similar, although some local rankings changed when longer travel times were given less weight. The +20 PHC scenario still produced only a small statewide improvement.
+
+---
+
+## Planning meaning
+
+The results suggest that future PHC investment should be targeted at specific underserved communities rather than treated as a complete solution to healthcare access across Kano State.
+
+Facility location is only one part of the problem. Staffing, equipment, service capacity and actual healthcare use also matter.
+
+---
+
+## Important limitation
+
+The project does not contain facility staffing, bed capacity, service-volume, HMIS or healthcare-use data.
+
+For this reason, the 2SFCA results measure **modeled spatial availability**. They do **not** measure actual service quality, facility capacity or patient use.
+
+---
+
+## Validation
+
+The final scientific review:
+
+- reproduced all **20 candidate-site catchments** within numerical tolerance;
+- reproduced all **4 binary expansion scenarios** within numerical tolerance;
+- tested the results with three distance-decay approaches;
+- checked that the main conclusion remained stable;
+- documented the lack of external healthcare-utilization data.
+
+The validated numerical tables are available in the [`data`](data/) folder.
+
+---
 
 ## Repository structure
 
 ```text
 .
-├── assets/                  # Project cover and social preview
-├── data/processed/
-│   ├── gis/                 # Selected final GIS layers
-│   └── tables/              # Results, rankings and scenario tables
-├── docs/                    # Methodology, data, results and limitations
-├── notebooks/               # Results-review notebook
-├── outputs/
-│   ├── maps/                # Six final planning maps
-│   └── charts/              # Seven analytical charts
-├── scripts/python/          # Summary reproduction script
-├── validation/              # Automated repository checks
-├── CITATION.cff
-├── LICENSE
 ├── README.md
-├── project.json
-└── requirements.txt
+├── assets
+│   ├── project_cover
+│   │   └── kano_phc_accessibility_project_cover.png
+│   ├── maps
+│   │   ├── 01_2sfca_accessibility.png
+│   │   ├── 02_underserved_wards.png
+│   │   ├── 03_planning_priority_wards.png
+│   │   ├── 04_phc_expansion_scenarios.png
+│   │   └── 05_top20_candidate_sites.png
+│   └── charts
+│       ├── 01_statewide_2sfca_expansion.png
+│       ├── 02_population_benefiting.png
+│       └── 03_distance_decay_sensitivity.png
+├── data
+│   ├── validated_headline_findings.csv
+│   ├── validated_expansion_scenarios.csv
+│   └── validated_distance_decay_results.csv
+└── validation
+    ├── numerical_consistency_check.csv
+    └── reviewer_action_register.csv
 ```
 
-## Reproducibility
+---
 
-This repository publishes the final analytical evidence and a results-reproduction script. The complete road-network computation is not included because the source graph files are large and depend on a time-specific OpenStreetMap snapshot. The methodology document records the analytical sequence, assumptions and interpretation limits.
+## Tools
 
-Run:
+- Python
+- GeoPandas
+- NetworkX / road-network analysis
+- GIS
+- 2SFCA accessibility modelling
+- Matplotlib
+- Pandas
 
-```bash
-pip install -r requirements.txt
-python scripts/python/reproduce_summary.py
-python validation/validate_repository.py
-```
+---
 
 ## Author
 
-**Abdullah Abdazeez Ayomide**  
-Geo-spatial Planner | GIS & Remote Sensing Analyst
+**Abdullah Abdazeez Ayomide**
 
-- [GitHub](https://github.com/Abdullahabdazeez)
-- [LinkedIn](https://ng.linkedin.com/in/abdazeez-abdullah-4b814719a)
-- [Email](mailto:abdazeezabdullah1@gmail.com)
-
-## Citation and licence
-
-Citation metadata is provided in [`CITATION.cff`](CITATION.cff). Code and original repository documentation are released under the MIT License. External datasets retain their providers' original licences and terms.
+Geo-spatial Planner | GIS and Remote Sensing Analyst | Environmental and Urban Planning Researcher
