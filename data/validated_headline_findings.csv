@@ -1,0 +1,11 @@
+Indicator,Value,Unit,Scientific_Status,Source
+Baseline population-weighted 2SFCA,0.8438488753787575,"PHCs per 10,000 population",VALIDATED,K7D
++5 PHC population-weighted 2SFCA,0.8465125397581096,"PHCs per 10,000 population",VALIDATED,K7D
++10 PHC population-weighted 2SFCA,0.8491762041374616,"PHCs per 10,000 population",VALIDATED,K7D
++20 PHC population-weighted 2SFCA,0.854503532896166,"PHCs per 10,000 population",VALIDATED,K7D
++20 PHC relative statewide 2SFCA gain,1.2626262626262514,percent,VALIDATED,K7D
+Population benefiting from +10 PHCs,556700.6144218445,persons,VALIDATED,K7D
+Population benefiting from +20 PHCs,687356.410675168,persons,VALIDATED,K7D
+Share of population benefiting from +20 PHCs,3.6617735740695694,percent,VALIDATED,K7D
+Top-20 candidate catchments reproduced,20.0,candidate sites,VALIDATED,K7D
+Binary expansion scenarios reproduced,4.0,scenarios,VALIDATED,K7D
