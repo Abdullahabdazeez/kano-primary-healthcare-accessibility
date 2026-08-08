@@ -406,7 +406,7 @@ The distance-decay and sensitivity results are available in:
 
  
 
-These files allow reviewers to inspect the results behind the sensitivity analysis rather than relying only on the figures.
+
 
  
 
@@ -418,7 +418,7 @@ These files allow reviewers to inspect the results behind the sensitivity analys
 
  
 
-The final review checked the main results used in the project.
+
 
  
 
@@ -452,7 +452,7 @@ Selected validation evidence is available in:
 
  
 
-The reviewer action register is also included so that the main corrections made during the final review can be inspected.
+
 
  
 
