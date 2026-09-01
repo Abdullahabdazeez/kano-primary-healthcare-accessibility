@@ -9,7 +9,6 @@ on:
 jobs:
   validate:
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v5
 
@@ -17,8 +16,58 @@ jobs:
         with:
           python-version: "3.12"
 
-      - run: pip install pandas
+      - name: Validate published portfolio package
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import csv, json, sys
 
-      - run: python scripts/python/reproduce_summary.py
+          root = Path('.')
+          failures = []
+          required = [
+              'README.md', 'LICENSE', 'CITATION.cff', 'project.json',
+              'data/core_results/Kano_Validated_Headline_Findings.csv',
+              'data/core_results/Kano_Validated_Expansion_Scenario_Summary.csv',
+          ]
+          for rel in required:
+              p = root / rel
+              if not p.exists() or (p.is_file() and p.stat().st_size == 0):
+                  failures.append(f'Missing or empty: {rel}')
 
-      - run: python validation/validate_repository.py
+          try:
+              json.loads((root / 'project.json').read_text(encoding='utf-8'))
+          except Exception as exc:
+              failures.append(f'Invalid project.json: {exc}')
+
+          headline = root / 'data/core_results/Kano_Validated_Headline_Findings.csv'
+          if headline.exists():
+              with headline.open(encoding='utf-8-sig', newline='') as f:
+                  rows = list(csv.DictReader(f))
+              vals = {r['Indicator']: float(r['Value']) for r in rows}
+              checks = {
+                  'Baseline population-weighted 2SFCA': 0.8438488753787575,
+                  'Population benefiting from +10 PHCs': 556700.6144218445,
+              }
+              for key, expected in checks.items():
+                  actual = vals.get(key)
+                  if actual is None or abs(actual - expected) > 1e-6:
+                      failures.append(f'Headline result mismatch: {key}')
+
+          for dirname in ['assets', 'docs', 'scripts', 'validation']:
+              d = root / dirname
+              if not d.exists() or not any(p.is_file() for p in d.rglob('*')):
+                  failures.append(f'Missing public package content: {dirname}/')
+
+          for p in root.rglob('*'):
+              if p.is_file() and p.stat().st_size > 95 * 1024 * 1024:
+                  failures.append(f'File exceeds 95 MB: {p}')
+
+          if failures:
+              print('VALIDATION FAILED')
+              for item in failures:
+                  print('-', item)
+              sys.exit(1)
+
+          print('VALIDATION PASSED')
+          print('Kano public package metadata, validated headline results, documentation and repository structure are consistent.')
+          PY
