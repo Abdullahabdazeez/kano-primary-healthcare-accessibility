@@ -83,7 +83,7 @@ The analysis supports targeted PHC expansion, but it also shows the limit of loc
 
 ## Project files
 
-The seven final maps are in [`assets/maps`](assets/maps/), analytical charts are in [`assets/charts`](assets/charts/), and the technical report is in [`report`](report/).
+The seven final maps are in [`assets/maps`](assets/maps/), analytical charts are in [`assets/charts`](assets/charts/), and the technical report is in [`reports`](reports/).
 
 **Tools:** Python · GeoPandas · NetworkX · Pandas · Matplotlib · GIS · road-network analysis · 2SFCA
 

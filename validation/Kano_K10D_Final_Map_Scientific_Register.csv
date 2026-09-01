@@ -1,8 +1,0 @@
-map,interpretation,audit_status
-01_PHC_Distribution_and_Population_Demand.png,Descriptive spatial context.,VALIDATED
-02_Network_Travel_Time_to_Nearest_PHC.png,Modeled geographical proximity by road-network travel time.,VALIDATED
-03_Validated_15min_2SFCA_Healthcare_Accessibility.png,Facility-count-based modeled spatial availability; not capacity or utilization.,VALIDATED_WITH_INTERPRETATION_CORRECTION
-04_Multi_Dimensional_Underserved_Wards.png,"Spatial underservice based on modeled supply, travel and coverage indicators.",VALIDATED
-05_Healthcare_Planning_Priority_Wards.png,"Spatial planning priority, not observed health outcome.",VALIDATED
-06_Validated_PHC_Expansion_Scenarios.png,Scenario effects are localized; +20 PHCs produce only 1.263% statewide population-weighted 2SFCA gain.,REBUILT_FROM_VALIDATED_SCENARIOS
-07_Validated_Top20_New_PHC_Candidate_Sites.png,Verified candidate intervention sites; not evidence of realized service improvement.,REBUILT_FROM_VERIFIED_CANDIDATES

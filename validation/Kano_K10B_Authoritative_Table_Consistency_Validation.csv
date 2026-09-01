@@ -1,6 +1,0 @@
-check,actual,expected,difference,tolerance,passed
-Baseline population-weighted 2SFCA,0.8438488753787575,0.843849,1.2462124243661776e-07,1e-06,True
-+20 population-weighted 2SFCA,0.854503532896166,0.854504,4.671038340564593e-07,1e-06,True
-+20 relative gain percent,1.2626262626262514,1.262626,2.62626251412712e-07,1e-05,True
-All binary scenario MAEs within zero tolerance,4.520773898248043e-15,0.0,4.520773898248043e-15,1e-09,True
-All candidate catchment errors within zero tolerance,1.8189894035458565e-12,0.0,1.8189894035458565e-12,1e-09,True
